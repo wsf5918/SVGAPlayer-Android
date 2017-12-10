@@ -6,11 +6,33 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Hello"
+        android:background="@mipmap/bg_face"
+        android:scaleType="fitXY"/>
     <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svgaImageView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:scaleType="fitCenter"
         app:source="rose_2.0.0.svga"
-        app:antiAlias="true"/>
+        app:antiAlias="true"
+        app:loopCount="1"/>
 
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前动画"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#33FF00"/>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        />
 </RelativeLayout>
